@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tasks',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,8 @@ ROOT_URLCONF = 'TasksManager.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates']
+        ,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,10 +77,15 @@ WSGI_APPLICATION = 'TasksManager.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'gestion_taches_db',
+        'USER': 'tatsuya',
+        'PASSWORD': 'l6n8ltqXKU6YBYh$C3U&wTd!j!YZ$k',
+        'HOST': 'localhost',  # Pour Docker/Kubernetes, utiliser "db"
+        'PORT': '3306',
     }
 }
+
 
 
 # Password validation

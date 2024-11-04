@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TasksManager</title>
+</head>
+<body>
+    <h1>Liste des Tâches</h1>
+<ul>
+  {% for task in tasks %}
+    <li>{{ task.title }} - {% if task.completed %}Complet{% else %}En cours{% endif %}</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'add_task' %}">Ajouter une tâche</a>
+
+</body>
+</html>
