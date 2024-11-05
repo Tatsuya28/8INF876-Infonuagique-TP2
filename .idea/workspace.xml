@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75a37dfb-2d27-47a9-bda7-27812972b374" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/TasksManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TasksManager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManager/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +39,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Tatsuya28/8INF876-Infonuagique-TP2.git&quot;,
-    &quot;accountId&quot;: &quot;56ac0293-dfd6-45d6-b01a-89a14f3debf6&quot;
+    &quot;accountId&quot;: &quot;e536ae8f-3eff-4999-9f0c-9d2d4683afa4&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -60,13 +59,13 @@
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/user/PycharmProjects/8INF876-Infonuagique-TP2/TasksManager/settings.py",
+    "last_opened_file_path": "D:/UTBM/SEE/2024_Automne/8INF876_Conception_Architecture_systemes_infonuagique/8INF876_TP2-Thomas_FRIDBLATT-Eliseo_CHAUSSOY/8INF876-Infonuagique-TP2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "application.passwordSafe",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -99,6 +98,8 @@
       <workItem from="1730756919779" duration="85000" />
       <workItem from="1730758386774" duration="4914000" />
       <workItem from="1730821251021" duration="12259000" />
+      <workItem from="1730840868872" duration="591000" />
+      <workItem from="1730841511108" duration="2046000" />
     </task>
     <servers />
   </component>

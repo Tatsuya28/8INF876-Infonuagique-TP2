@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'gestion_taches_db',
-        'USER': 'kayouu',
-        'PASSWORD': 't4zjST$5eK$DDeDS98rs',
+        'USER': 'tatsuya',
+        'PASSWORD': 'l6n8ltqXKU6YBYh$C3U&wTd!j!YZ$k',
         'HOST': 'localhost',  # Pour Docker/Kubernetes, utiliser "db"
         'PORT': '3306',
     }
