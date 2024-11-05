@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TasksManager</title>
+</head>
+<body>
+    <h1>Ajouter une Tâche</h1>
+<form method="post">
+  {% csrf_token %}
+  <label for="title">Titre:</label><br>
+  <input type="text" id="title" name="title"><br><br>
+  <label for="description">Description:</label><br>
+  <textarea id="description" name="description"></textarea><br><br>
+  <label for="due_date">Date d'échéance:</label><br>
+  <input type="datetime-local" id="due_date" name="due_date"><br><br>
+  <input type="submit" value="Ajouter">
+</form>
+
+</body>
+</html>
