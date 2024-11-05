@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75a37dfb-2d27-47a9-bda7-27812972b374" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tasks/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/tasks/add_task.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/tasks/task_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TasksManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TasksManager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730756918241</updated>
       <workItem from="1730756919779" duration="1498000" />
-      <workItem from="1730758469476" duration="4817000" />
+      <workItem from="1730758469476" duration="6258000" />
     </task>
     <servers />
   </component>
