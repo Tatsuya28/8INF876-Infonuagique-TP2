@@ -7,7 +7,7 @@ from django.contrib import messages
 
 def task_list(request):
     if "user_id" in request.session:
-        tasks = Task.objects.filter(id=request.session["user_id"])
+        tasks = Task.objects.filter(user_id=request.session["user_id"])
         user = User.objects.get(id=request.session["user_id"])
         return render(request, 'tasks/task_list.html', {'tasks': tasks, 'user': user})
 
@@ -76,8 +76,19 @@ def delete_task(request):
 def register(request):
     if request.method == 'POST':
         name = request.POST['name']
-        password = request.POST['password']
         email = request.POST['email']
+        password = request.POST['password']
+        confirm_password = request.POST['confirm_password']
+
+        # Vérifier que l'email n'est pas déjà présent dans la BDD
+        if User.objects.filter(email=email).exists():
+            messages.error(request, 'Email already registered.')
+            return redirect('register')
+
+        # Verifier si les mots de passe sont identiques
+        if password != confirm_password:
+            messages.error(request, 'Passwords do not match')
+            return redirect('register')
 
         hashed_password = make_password(password)
 
@@ -108,7 +119,7 @@ def login(request):
 
 
 def logout(request):
-    if 'email' in request.session:
+    if "user_id" in request.session:
         del request.session['user_id']
         messages.success(request, "Vous êtes déconnecté avec succès.")
     return redirect('login')

@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Se connecter</title>
-</head>
-<body>
-    <h1>Se connecter</h1>
+{% extends "tasks/base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <h2>Se connecter</h2>
     <form method="post" action="{% url 'login' %}">
         {% csrf_token %}
 
@@ -20,5 +18,4 @@
     <div>
         <p>Si vous n'avez pas de compte, <a href="{% url 'register' %}">cliquez ici</a></p>
     </div>
-</body>
-</html>
+{% endblock %}

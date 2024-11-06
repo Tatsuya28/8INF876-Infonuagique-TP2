@@ -10,12 +10,23 @@
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur l'application de gestion des tâches</h1>
         <nav>
-            <a href="{% url 'task_list' %}">Liste des tâches</a>
-            <a href="{% url 'add_task' %}">Ajouter une tâche</a>
-            <a href="{% url 'logout' %}">Déconnexion</a>
+            <ul>
+                {% if "user_id" in request.session %}
+                <!-- Si l'utilisateur est connecté, afficher ces liens -->
+                    <li><a href="{% url 'task_list' %}">Mes tâches</a></li>
+                    <li><a href="{% url 'logout' %}">Déconnexion</a></li>
+                {% else %}
+                    <!-- Si l'utilisateur n'est pas connecté, afficher ces liens -->
+                    <li><a href="{% url 'login' %}">Se connecter</a></li>
+                    <li><a href="{% url 'register' %}">S'inscrire</a></li>
+                {% endif %}
+            </ul>
+
         </nav>
+    {% if "user_id" not in request.session %}
+        <h1>Bienvenue sur l'application de gestion des tâches</h1>
+    {% endif %}
     </header>
 
     <!-- Section pour afficher les messages de succès ou d'erreur -->
