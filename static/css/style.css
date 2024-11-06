@@ -1,0 +1,12 @@
+.messages {
+  list-style: none;
+  padding: 0;
+}
+
+.messages .success {
+  color: green;
+}
+
+.messages .error {
+  color: red;
+}

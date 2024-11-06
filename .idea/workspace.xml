@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75a37dfb-2d27-47a9-bda7-27812972b374" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/tasks/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f28aea06-d1e7-4d7c-b9db-8b636965fc10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f28aea06-d1e7-4d7c-b9db-8b636965fc10.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TasksManager/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/migrations/0002_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/migrations/0003_alter_user_password.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/migrations/0004_task_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tasks/add_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks/add_task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tasks/edit_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks/edit_task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tasks/task_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks/task_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +34,7 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -59,7 +70,8 @@
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "tatsuya",
-    "last_opened_file_path": "D:/UTBM/SEE/2024_Automne/8INF876_Conception_Architecture_systemes_infonuagique/8INF876_TP2-Thomas_FRIDBLATT-Eliseo_CHAUSSOY/8INF876-Infonuagique-TP2",
+    "last_opened_file_path": "D:/UTBM/SEE/2024_Automne/8INF876_Conception_Architecture_systemes_infonuagique/8INF876_TP2-Thomas_FRIDBLATT-Eliseo_CHAUSSOY/8INF876-Infonuagique-TP2/tasks/migrations",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,7 +87,12 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\UTBM\SEE\2024_Automne\8INF876_Conception_Architecture_systemes_infonuagique\8INF876_TP2-Thomas_FRIDBLATT-Eliseo_CHAUSSOY\8INF876-Infonuagique-TP2\tasks\migrations" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\UTBM\SEE\2024_Automne\8INF876_Conception_Architecture_systemes_infonuagique\8INF876_TP2-Thomas_FRIDBLATT-Eliseo_CHAUSSOY\8INF876-Infonuagique-TP2\templates\tasks" />
+      <recent name="D:\UTBM\SEE\2024_Automne\8INF876_Conception_Architecture_systemes_infonuagique\8INF876_TP2-Thomas_FRIDBLATT-Eliseo_CHAUSSOY\8INF876-Infonuagique-TP2\templates" />
       <recent name="C:\Users\user\PycharmProjects\8INF876-Infonuagique-TP2" />
     </key>
   </component>
@@ -99,7 +116,7 @@
       <workItem from="1730758386774" duration="4914000" />
       <workItem from="1730821251021" duration="12259000" />
       <workItem from="1730840868872" duration="591000" />
-      <workItem from="1730841511108" duration="3135000" />
+      <workItem from="1730841511108" duration="10060000" />
     </task>
     <servers />
   </component>

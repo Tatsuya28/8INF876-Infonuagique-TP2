@@ -6,35 +6,42 @@ from django.contrib import messages
 
 
 def task_list(request):
-    print("User:", request.user)  # Ajoutez ceci pour déboguer
-    if request.user.is_authenticated:
-        tasks = Task.objects.filter(user=request.user)
-        return render(request, 'tasks/task_list.html', {'tasks': tasks, 'user': request.user})
+    if "user_id" in request.session:
+        tasks = Task.objects.filter(id=request.session["user_id"])
+        user = User.objects.get(id=request.session["user_id"])
+        return render(request, 'tasks/task_list.html', {'tasks': tasks, 'user': user})
 
     return redirect('login')
 
 
 
-@login_required
 def add_task(request):
+    if "user_id" not in request.session:  # Vérifie si l'utilisateur est connecté via la session
+        return redirect('login')  # Redirige vers la page de connexion si non connecté
+
     if request.method == 'POST':
         title = request.POST['title']
         description = request.POST.get('description', '')
         due_date = request.POST.get('due_date', None)
 
+        # Récupère l'utilisateur connecté via la session
+        user = User.objects.get(id=request.session['user_id'])
+
         Task.objects.create(
             title=title,
             description=description,
             due_date=due_date,
-            user=request.user  # Associe la tâche à l'utilisateur connecté
+            user=user  # Associe la tâche à l'utilisateur récupéré via la session
         )
         return redirect('task_list')
 
     return render(request, 'tasks/add_task.html')
 
 
-@login_required
 def edit_task(request):
+    if "user_id" not in request.session:  # Vérifie si l'utilisateur est connecté via la session
+        return redirect('login')  # Redirige vers la page de connexion si non connecté
+
     if request.method == 'POST':
         task_id = request.POST.get('task_id')
         task = get_object_or_404(Task, id=task_id)
@@ -55,8 +62,10 @@ def edit_task(request):
         return render(request, 'tasks/edit_task.html', {'task': task})
 
 
-@login_required
 def delete_task(request):
+    if "user_id" not in request.session:  # Vérifie si l'utilisateur est connecté via la session
+        return redirect('login')  # Redirige vers la page de connexion si non connecté
+
     if request.method == 'POST':
         task_id = request.POST.get('task_id')
         task = get_object_or_404(Task, id=task_id)
@@ -83,12 +92,11 @@ def login(request):
         input_email = request.POST['email']
         input_password = request.POST['password']
 
-        print("Session before login:", request.session)  # Pour vérifier l'état de la session
-
         try:
             registered_user = User.objects.get(email=input_email)
+
             if check_password(input_password, registered_user.password):
-                request.session['email'] = registered_user.email
+                request.session['user_id'] = registered_user.id
                 messages.success(request, "Vous êtes bien connecté!")
                 return redirect('task_list')
             else:
@@ -101,6 +109,6 @@ def login(request):
 
 def logout(request):
     if 'email' in request.session:
-        del request.session['email']
+        del request.session['user_id']
         messages.success(request, "Vous êtes déconnecté avec succès.")
     return redirect('login')
