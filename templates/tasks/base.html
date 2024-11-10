@@ -6,9 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}TasksManager{% endblock %}</title>
-{#    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Chemin du CSS (si vous avez un fichier CSS) -->#}
-    <link rel="stylesheet" href="{% static 'css/base.css' %}"> <!-- Chemin du CSS (si vous avez un fichier CSS) -->
-    <link rel="stylesheet" href="{% static 'css/content.css' %}"> <!-- Chemin du CSS (si vous avez un fichier CSS) -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/content.css' %}">
 </head>
 <body>
     <header>
@@ -17,6 +16,7 @@
                 {% if "user_id" in request.session %}
                 <!-- Si l'utilisateur est connecté, afficher ces liens -->
                     <li><a href="{% url 'task_list' %}">Mes tâches</a></li>
+                    <li><a href="{% url 'add_task' %}">Ajouter une tâche</a></li>
                     <li><a href="{% url 'logout' %}">Déconnexion</a></li>
                 {% else %}
                     <!-- Si l'utilisateur n'est pas connecté, afficher ces liens -->

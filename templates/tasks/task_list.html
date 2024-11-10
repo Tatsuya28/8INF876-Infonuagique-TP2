@@ -48,7 +48,10 @@
             {% endfor %}
         </ul>
     </div>
-    <a href="{% url 'add_task' %}">Ajouter une tâche</a>
+
+    <div class="task-list">
+        <a class="add-task" href="{% url 'add_task' %}">Ajouter une tâche</a>
+    </div>
 
     {% if completed_tasks %}
         <div class="task-list">
