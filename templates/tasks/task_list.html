@@ -15,32 +15,40 @@
 
 {% extends "tasks/base.html" %}
 
+
 {% block title %}Liste des tâches{% endblock %}
 
 {% block content %}
-    <h2>{{ user.name }}, voici tes tâches :</h2>
-    <!-- Liste des tâches -->
 
-    <ul>
-        {% for task in tasks %}
-            <li>
-                <div>
-                    <h3>{{ task.title }}</h3>
-                    <p>{{ task.description }}</p>
-                    <p>Status : {% if task.completed %}Réalisée{% else %}En cours{% endif %} </p>
-                    <p>Date d'échéance : {{ task.due_date }}</p>
-                </div>
+    <div class="task-list">
+        <h2>{{ user.name }}, voici tes tâches :</h2>
+        <!-- Liste des tâches -->
 
-                <a href="{% url 'edit_task' %}?task_id={{ task.id }}">Edit</a>
+        <ul>
+            {% for task in tasks %}
+                <li>
+                    <div class="task">
+                        <div class="info">
+                            <h3>{{ task.title }}</h3>
+                            <p>{{ task.description }}</p>
+                            <p>Status : {% if task.completed %}Réalisée{% else %}En cours{% endif %} </p>
+                            <p>Date d'échéance : {{ task.due_date }}</p>
+                        </div>
 
-                <form action="{% url 'delete_task' %}" method="post" style="display:inline;" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?');">
-                    {% csrf_token %}
-                    <input type="hidden" name="task_id" value="{{ task.id }}">
-                    <button type="submit">Supprimer</button>
-                </form>
-            </li>
-        {% endfor %}
-    </ul>
+                        <div class="actions">
+                            <a href="{% url 'edit_task' %}?task_id={{ task.id }}">Editer</a>
+                            <form action="{% url 'delete_task' %}" method="post"
+                                  onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?');">
+                                {% csrf_token %}
+                                <input type="hidden" name="task_id" value="{{ task.id }}">
+                                <button type="submit">Suppr.</button>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
 
-    <a href="{% url 'add_task' %}">Ajouter une tâche</a>
+        <a href="{% url 'add_task' %}">Ajouter une tâche</a>
+    </div>
 {% endblock %}
