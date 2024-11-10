@@ -21,17 +21,16 @@
 {% block content %}
 
     <div class="task-list">
-        <h2>{{ user.name }}, voici tes tâches :</h2>
+        <h2>{{ user.name }}, voici tes tâches à faire :</h2>
         <!-- Liste des tâches -->
 
         <ul>
-            {% for task in tasks %}
+            {% for task in uncompleted_tasks %}
                 <li>
                     <div class="task">
                         <div class="info">
                             <h3>{{ task.title }}</h3>
                             <p>{{ task.description }}</p>
-                            <p>Status : {% if task.completed %}Réalisée{% else %}En cours{% endif %} </p>
                             <p>Date d'échéance : {{ task.due_date }}</p>
                         </div>
 
@@ -48,7 +47,36 @@
                 </li>
             {% endfor %}
         </ul>
-
-        <a href="{% url 'add_task' %}">Ajouter une tâche</a>
     </div>
+    <a href="{% url 'add_task' %}">Ajouter une tâche</a>
+
+    {% if completed_tasks %}
+        <div class="task-list">
+            <h2>{{ user.name }}, voici tes tâches réalisées :</h2>
+            <!-- Liste des tâches -->
+
+            <ul>
+                {% for task in completed_tasks %}
+                    <li>
+                        <div class="task">
+                            <div class="info">
+                                <h3>{{ task.title }}</h3>
+                                <p>{{ task.description }}</p>
+                                <p>Date d'échéance : {{ task.due_date }}</p>
+                            </div>
+
+                            <div class="actions">
+                                <form action="{% url 'delete_task' %}" method="post"
+                                      onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?');">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="task_id" value="{{ task.id }}">
+                                    <button type="submit">Suppr.</button>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
 {% endblock %}

@@ -7,9 +7,13 @@ from django.contrib import messages
 
 def task_list(request):
     if "user_id" in request.session:
-        tasks = Task.objects.filter(user_id=request.session["user_id"])
         user = User.objects.get(id=request.session["user_id"])
-        return render(request, 'tasks/task_list.html', {'tasks': tasks, 'user': user})
+        # tasks = Task.objects.filter(user_id=request.session["user_id"]).order_by('due_date')
+        uncompleted_tasks = Task.objects.filter(user_id=request.session["user_id"], completed=False).order_by('due_date')
+        completed_tasks = Task.objects.filter(user_id=request.session["user_id"], completed=True).order_by('due_date')
+
+
+        return render(request, 'tasks/task_list.html', {'uncompleted_tasks': uncompleted_tasks, 'completed_tasks': completed_tasks, 'user': user})
 
     return redirect('login')
 
