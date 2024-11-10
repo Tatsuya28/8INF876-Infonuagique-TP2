@@ -20,6 +20,7 @@ header {
     color: #fff;
     padding: 1rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     min-width: 50%;
