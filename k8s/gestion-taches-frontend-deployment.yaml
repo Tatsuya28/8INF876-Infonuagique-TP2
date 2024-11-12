@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gestion-taches-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gestion-taches-frontend
+  template:
+    metadata:
+      labels:
+        app: gestion-taches-frontend
+    spec:
+      containers:
+      - name: gestion-taches-frontend
+        image: gestion-taches-frontend:latest  # Utilise l'image que l'on a créé
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
