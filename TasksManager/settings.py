@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'TasksManager.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gestion_taches_db',
-        'USER': 'tatsuya',
-        'PASSWORD': 'l6n8ltqXKU6YBYh$C3U&wTd!j!YZ$k',
-        'HOST': 'localhost',  # Pour Docker/Kubernetes, utiliser "db"
-        'PORT': '3306',
+        'NAME': os.environ.get('DB_NAME', 'gestion_taches_db'),
+        'USER': os.environ.get('DB_USER', 'tatsuya'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', 'l6n8ltqXKU6YBYh$C3U&wTd!j!YZ$k'),
+        'HOST': os.environ.get('DB_HOST', 'mysql'),  # Pour Docker/Kubernetes, utiliser "db"
+        'PORT': os.environ.get('DB_PORT', '3306'),
     }
 }
 

@@ -23,5 +23,5 @@ COPY . .
 # Exposer le port sur lequel notre application Django s'exécute
 EXPOSE 8000
 
-# Exécuter la commande de démarrage
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# Exécuter les commandes de migrations et démarrer le serveur
+CMD ["sh", "-c", "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]

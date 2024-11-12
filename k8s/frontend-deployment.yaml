@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gestion-taches-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gestion-taches-frontend
+  template:
+    metadata:
+      labels:
+        app: gestion-taches-frontend
+    spec:
+      containers:
+      - name: gestion-taches-frontend
+        image: gestion-taches-frontend:dev  # Utilise l'image que l'on a créé
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+        env:
+          - name: DB_HOST
+            value: "mysql"
+          - name: DB_PORT
+            value: "3306"
+          - name: DB_NAME
+            value: "gestion_taches_db"
+          - name: DB_USER
+            value: "tatsuya"
+          - name: DB_PASSWORD
+            value: "l6n8ltqXKU6YBYh$C3U&wTd!j!YZ$k"
