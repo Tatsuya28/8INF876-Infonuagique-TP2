@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75a37dfb-2d27-47a9-bda7-27812972b374" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/k8s/frontend-deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/mysql-pvc.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f28aea06-d1e7-4d7c-b9db-8b636965fc10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f28aea06-d1e7-4d7c-b9db-8b636965fc10.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManager/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManager/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/gestion-taches-frontend-deployment.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/gestion-taches-frontend-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/frontend-service.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/mysql-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/mysql-deployment.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +111,7 @@
       <workItem from="1731186090259" duration="3594000" />
       <workItem from="1731189763834" duration="11909000" />
       <workItem from="1731379057390" duration="4915000" />
-      <workItem from="1731422080294" duration="10859000" />
+      <workItem from="1731422080294" duration="11219000" />
     </task>
     <servers />
   </component>

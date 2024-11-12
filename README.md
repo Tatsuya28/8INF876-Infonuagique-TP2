@@ -82,7 +82,7 @@ Pour plus d'informations sur les technologies utilisées, veuillez consulter les
 ## Construction de l'image Docker
 
    ```bash
-   docker build -t gestion-taches-frontend .
+   docker build -t gestion-taches-frontend:dev .
    ```
 
 ## Déploiement sur Kubernetes avec Minikube
@@ -104,7 +104,7 @@ Pour plus d'informations sur les technologies utilisées, veuillez consulter les
 
 2. Chargez l'image Docker dans Minikube :
    ```bash
-   minikube image load gestion-taches-frontend
+   minikube image load gestion-taches-frontend:dev
    ```
 
 3. Appliquez les fichiers de configuration Kubernetes :
@@ -119,7 +119,7 @@ Pour plus d'informations sur les technologies utilisées, veuillez consulter les
 
 4. Obtenir l'url du service pour accéder à l'application :
    ```bash
-   minikube service gestion-taches-frontend-service
+   minikube service gestion-taches-frontend
    ```
    Suivez l'URL pour accéder à l'application Django déployée sur Kubernetes.
 
@@ -127,7 +127,7 @@ Pour plus d'informations sur les technologies utilisées, veuillez consulter les
 
 Selon votre configuration, l'application sera accessible à l'une des adresses suivantes :
 - En local : `http://127.0.0.1:8000/`
-- Sur Minikube : URL obtenue avec `minikube service gestion-taches-frontend-service`
+- Sur Minikube : URL obtenue avec `minikube service gestion-taches-frontend`
 
 ## Structure du Projet
 
@@ -142,5 +142,4 @@ Selon votre configuration, l'application sera accessible à l'une des adresses s
     ├── README.md          # Fichier README (que vous lisez actuellement)
     ├── manage.py          # Fichier principal de l'application Django
     └── requirements.txt   # Fichier contenant les dépendances Python requises
-
 ```
