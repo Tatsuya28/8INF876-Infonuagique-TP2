@@ -82,7 +82,7 @@ Pour plus d'informations sur les technologies utilisées, veuillez consulter les
 ## Construction de l'image Docker
 
    ```bash
-   docker build -t gestion-taches-frontend:dev .
+   docker build -t gestion-taches-frontend .
    ```
 
 ## Déploiement sur Kubernetes avec Minikube
@@ -104,7 +104,7 @@ Pour plus d'informations sur les technologies utilisées, veuillez consulter les
 
 2. Chargez l'image Docker dans Minikube :
    ```bash
-   minikube image load gestion-taches-frontend:dev
+   minikube image load gestion-taches-frontend
    ```
 
 3. Appliquez les fichiers de configuration Kubernetes :
