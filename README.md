@@ -1,6 +1,6 @@
 # Application de Gestion de Tâches
 
-Il s'agit d'un projet réalisé en collaboration avec Thomas FRIDBLATT dans le cadre du cours **[8INF876] Conception et
+Il s'agit d'un projet réalisé par Thomas FRIDBLATT et moi même Eliséo CHAUSSOY dans le cadre du cours **[8INF876] Conception et
 Architecture des systèmes infonuagique** pour le TP2 à l'UQAC.
 Cette application de gestion de tâches est une application web simple construite avec Django et MySQL.
 Elle permet aux utilisateurs de créer, visualiser, mettre à jour et supprimer des tâches.
